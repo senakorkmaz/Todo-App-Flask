@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/senak/Documents/GitHub/Todo-App-Flask/todo.db'
 db = SQLAlchemy(app)
 
-@app.route('/main')
+@app.route('/')
 def index():
     todos = Todo.query.all()
 
